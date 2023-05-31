@@ -1,0 +1,138 @@
+.App {
+  text-align: center;
+}
+html{
+  overflow-x: hidden;
+}
+body{
+  background-color: #212529 !important;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.menu-wrap{
+  font-size:0.8rem;
+  font-weight: bolder;
+}
+.menu-wrap.fixed-width{
+  width: 216px;
+}
+.member-tool-wrap{
+  background-color: #212A35;
+  height: 50px;
+  align-content: center;
+  vertical-align: center;
+  line-height: 50px;
+}
+
+.logo-wrap{
+  height: fit-content;
+}
+
+.music-player-wrap{
+  max-width: 310px !important;
+  width: 75% !important;
+}
+
+/* .thumbnail-wrap{
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+} */
+
+.show-nav-bar-button-wrap{
+  display: none !important;
+}
+
+.show-nav-bar-button-wrap span{
+  background-color: #193498;
+  padding: 10px;
+  border-radius: 15px;
+}
+.show-nav-bar-button-wrap{
+   transition-property: opacity;
+   transition-duration: 200ms;
+   transition-timing-function: linear;
+}
+div.show-nav-bar-button-wrap.show{
+  opacity: 1;
+}
+
+div.show-nav-bar-button-wrap.hide{
+  opacity: 0;
+}
+.home-btn-wrap{
+  display: none;
+  font-size: 2em;
+  text-align: center;
+}
+@media screen and (max-width: 575px){
+.home-btn-wrap{
+  display: block;
+}
+.show-nav-bar-button-wrap{
+  opacity: 0;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 5000;
+  left: 0;
+  width: 20px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #193498;
+  font-size: 2em;
+  align-items: center;
+}
+.left-side-bar{
+  transition-property: left;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
+
+.left-side-bar.hide{
+  display: none !important;
+  left: -300px;
+}
+
+.left-side-bar.show{
+  display: block !important;
+  left: 0px;
+}
+.login-form-wrap{
+    position: absolute;
+}
+}
