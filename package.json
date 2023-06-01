@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "16.20.0"
+    "node": "14.20.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
@@ -32,6 +32,7 @@
   "scripts": {
     "startclient": "react-scripts start",
     "startserver": "nodemon ../server/bin/www",
+    "startup": "pm2 start npm --name \"music-app-client\" -- run start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
