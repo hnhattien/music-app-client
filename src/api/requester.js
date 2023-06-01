@@ -68,6 +68,7 @@ export default {
       method: "POST",
       body: data,
       credentials: "include",
+      mode: "cors",
     });
 
     const result = await response.json();
@@ -77,86 +78,4 @@ export default {
     }
     return Promise.resolve(result);
   },
-  // getWithToken: async (url, locale = 'vi', params) => {
-  //   const session = await getSession();
-  //   const response = await fetch(
-  //     `${getBaseURL()}${url}${params ? '?' + new URLSearchParams(params) : ''}`,
-  //     {
-  //       headers: {
-  //         'Accept-Language': locale,
-  //         Authorization: `Bearer ${session.accessToken}`,
-  //       },
-  //     }
-  //   );
-  //   const result = await response.json();
-
-  //   if (result.httpCode >= 400) {
-  //     return Promise.reject(result);
-  //   }
-  //   return Promise.resolve(result);
-
-  // },
-  // postWithToken: async (url, data = {}, locale = 'vi') => {
-  //   const session = await getSession();
-  //   const auth = session
-  //     ? { Authorization: `Bearer ${session?.accessToken}` }
-  //     : {};
-  //   const response = await fetch(`${getBaseURL()}${url}`, {
-  //     method: 'POST',
-  //     headers: {
-  //       'Accept-Language': locale,
-  //       'Content-Type': 'application/json',
-  //       ...auth,
-  //     },
-  //     body: JSON.stringify(data),
-  //   });
-  //   const result = await response.json();
-
-  //   if (result.httpCode >= 400) {
-  //     return Promise.reject(result);
-  //   }
-  //   return Promise.resolve(result);
-  // },
-  // putWithToken: async (url, data = {}, locale = 'vi') => {
-  //   const session = await getSession();
-  //   const auth = session
-  //     ? { Authorization: `Bearer ${session?.accessToken}` }
-  //     : {};
-  //   const response = await fetch(`${getBaseURL()}${url}`, {
-  //     method: 'PUT',
-  //     headers: {
-  //       'Accept-Language': locale,
-  //       'Content-Type': 'application/json',
-  //       ...auth,
-  //     },
-  //     body: JSON.stringify(data),
-  //   });
-  //   const result = await response.json();
-
-  //   if (result.httpCode >= 400) {
-  //     return Promise.reject(result);
-  //   }
-  //   return Promise.resolve(result);
-  // },
-  // deleteWithToken: async (url, data = {}, locale = 'vi') => {
-  //   const session = await getSession();
-  //   const auth = session
-  //     ? { Authorization: `Bearer ${session?.accessToken}` }
-  //     : {};
-  //   const response = await fetch(`${getBaseURL()}${url}`, {
-  //     method: 'DELETE',
-  //     headers: {
-  //       'Accept-Language': locale,
-  //       'Content-Type': 'application/json',
-  //       ...auth,
-  //     },
-  //     body: JSON.stringify(data),
-  //   });
-  //   const result = await response.json();
-
-  //   if (result.httpCode >= 400) {
-  //     return Promise.reject(result);
-  //   }
-  //   return Promise.resolve(result);
-  // },
 };
