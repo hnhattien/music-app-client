@@ -32,5 +32,7 @@ jobs:
       - run: npm install
       - run: npm run build --if-present
       - run: npm install -g pm2
-      - run: pm2 delete all
-      - run: npm run startup
+      - run: |
+          pm2 describe "music-app-client" && pm2 restart "music-app-client" 
+          || pm2 start npm --name "music-app-client" -- run serve
+    
