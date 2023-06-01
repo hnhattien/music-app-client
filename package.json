@@ -25,6 +25,7 @@
     "react-input-range": "^1.3.0",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "serve": "^14.2.0",
     "slug": "^5.1.0",
     "styled-components": "^5.3.1",
     "web-vitals": "^1.1.2"
@@ -32,7 +33,8 @@
   "scripts": {
     "startclient": "react-scripts start",
     "startserver": "nodemon ../server/bin/www",
-    "startup": "pm2 start npm --name \"music-app-client\" -- run start",
+    "serve": "serve -s build",
+    "startup": "pm2 start npm --name \"music-app-client\" -- run serve",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
