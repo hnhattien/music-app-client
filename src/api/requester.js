@@ -11,6 +11,7 @@ export default {
       `${getBaseURL()}${url}${params ? "?" + new URLSearchParams(params) : ""}`,
       {
         credentials: "include",
+        mode: "cors",
       }
     ).then((res) => res.json()),
 
@@ -19,6 +20,7 @@ export default {
       `${getBaseURL()}${url}${params ? "?" + new URLSearchParams(params) : ""}`,
       {
         credentials: "include",
+        mode: "cors",
       }
     );
 
@@ -36,6 +38,7 @@ export default {
         "Content-Type": "application/json",
       },
       credentials: "include",
+      mode: "cors",
       body: JSON.stringify(data),
     });
 
@@ -53,6 +56,7 @@ export default {
         "Content-Type": "application/json",
       },
       credentials: "include",
+      mode: "cors",
       body: JSON.stringify(data),
     });
 
